@@ -14,18 +14,7 @@
 		<div>
 			<a href="." class="lowlight"><h1>Exemplos Angular.js</h1></a>
 			<br />
-			<div data-ng-app="index">
-				<p>Hello, {{ 'world' + '!' }}</p>
-				<br />
-				<h2>Outros exemplos:</h2>
-				<div data-ng-controller="RepeatController">
-				<ol>
-					<li data-ng-repeat="example in examples">
-						<a href="#!{{ example.tag }}">{{ example.title }} - {{ example.description }}</a>
-					</li>
-				</ol>
-			</div>
-			</div>
+			<div data-ng-app="index" ng-view=""></div>
 		</div>
 		<br />
 		<br />

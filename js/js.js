@@ -13,11 +13,15 @@
 	function initAngular(event) {
 		app.controller('RepeatController', function($scope) {
 			$scope.examples = [
-				{ tag: 'ex-1', title: 'Exemplo 1', description: 'Rotas.' }
+				{ tag: '', title: 'Exemplo 1', description: 'ng-repeat, ng-if' },
+				{ tag: 'ex-2', title: 'Exemplo 2', description: 'ngRoute' }
 			];
 		});
 		app.config(function($routeProvider) {
-			$routeProvider.when('/ex-1', { templateUrl : 'ex-1-rota' });
+			$routeProvider
+				.when('/', { templateUrl : 'main.html' })
+				.when('/ex-2', { templateUrl : 'ex-2-rota.html' })
+			;
 		});
 	}
 
