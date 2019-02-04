@@ -6,11 +6,12 @@
 		<link rel="icon" type="image/png" href="./favicon.png" />
 		<link rel="stylesheet" type="text/css" media="all" href="./css/css.css" />
 		<script type="text/javascript" src="./js/lib/angular-1.7.6.js"></script>
+		<script type="text/javascript" src="./js/lib/angular-route-1.7.6.js"></script>
 		<script type="text/javascript" src="./js/js.js"></script>
 		<title>Exemplos Angular.js.</title>
 	</head>
 	<body>
-		<div class="center">
+		<div>
 			<a href="." class="lowlight"><h1>Exemplos Angular.js</h1></a>
 			<br />
 			<div data-ng-app="index">
@@ -20,7 +21,7 @@
 				<div data-ng-controller="RepeatController">
 				<ol>
 					<li data-ng-repeat="example in examples">
-						{{ example.title }} - {{ example.description }}
+						<a href="#!{{ example.tag }}">{{ example.title }} - {{ example.description }}</a>
 					</li>
 				</ol>
 			</div>

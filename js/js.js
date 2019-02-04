@@ -1,18 +1,23 @@
 (function() {
 
+	let app;
+
 	function log(obj) {
 		console.log(obj);
 	}
 
 	function initGlobals(event) {
+		app = angular.module('index', ['ngRoute']);
 	}
 
 	function initAngular(event) {
-		angular.module('index', []).controller('RepeatController', function($scope) {
+		app.controller('RepeatController', function($scope) {
 			$scope.examples = [
-				{ n: 1, title: 'Exemplo 1', description: 'Lorem ipsum.' },
-				{ n: 2, title: 'Exemplo 2', description: 'Dolor sit amet.' }
+				{ tag: 'ex-1', title: 'Exemplo 1', description: 'Rotas.' }
 			];
+		});
+		app.config(function($routeProvider) {
+			$routeProvider.when('/ex-1', { templateUrl : 'ex-1-rota' });
 		});
 	}
 

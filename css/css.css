@@ -15,6 +15,9 @@ footer.center { text-align: center; }
 body footer { padding-top: 75px; }
 form footer { padding-top: 25px; }
 
+.center { margin: auto; }
+div.center { text-align: center; }
+
 .display-none { display: none; }
 .visibility-hidden { visibility: hidden; }
 
